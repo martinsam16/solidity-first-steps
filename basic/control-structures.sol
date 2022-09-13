@@ -2,8 +2,8 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
-contract Loops {
-    function loop() public {
+contract ControlStructures {
+    function loops() public {
         // for loop
         for (uint256 i = 0; i < 10; i++) {
             if (i == 3) {
@@ -27,9 +27,21 @@ contract Loops {
             j++;
         } while (j < 10);
 
-    /**
+        /**
         Don't write loops that are unbounded as this can hit the gas limit, causing your transaction to fail.
         For the reason above, while and do while loops are rarely used.
     */
+    }
+
+    function conditions() public {
+        if (true) {
+            //do something
+        }
+        
+        if (true) {
+            //do something
+        } else {
+            //do something
+        }
     }
 }
