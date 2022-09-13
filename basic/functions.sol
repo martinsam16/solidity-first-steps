@@ -5,8 +5,8 @@ contract Functions {
     /**
         function (<parameter types>) {internal|external} [pure|view|payable] [returns (<return types>)]
 
-        - pure functions can be converted to view and non-payable functions
-        - view functions can be converted to non-payable functions
+        - pure function declares that no state variable will be changed or read.
+        - view function declares that no state will be changed.
         - payable functions can be converted to non-payable functions
     */
 
