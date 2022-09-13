@@ -39,3 +39,6 @@ contract KumquatTree is Tree, Plant {
         return 3;
     }
 }
+
+// command to generate:
+// solc --userdoc --devdoc ex1.sol
