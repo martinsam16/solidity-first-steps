@@ -10,9 +10,11 @@ contract Functions {
         - payable functions can be converted to non-payable functions
     */
 
+   string private stateVariable;
+
     /**
         Pure
-    */
+    */ 
     function sumPureFunction(uint256 number1, uint256 number2)
         public
         pure
@@ -34,13 +36,19 @@ contract Functions {
         view
         returns (uint256 sum)
     {
+        string memory newVariable = stateVariable;
         sum = uintStateVar + number1 + number2;
+
     }
 
     /**
         Payable
     */
-    function transfer(address payable _to, uint256 _amount) public payable {
+    function transfer(address payable _to, uint256 _amount) 
+        public 
+        payable {
+            string memory newVariable = stateVariable;
+            stateVariable = ":D";
         // logic
     }
 
@@ -60,7 +68,11 @@ contract Functions {
                     receive()      fallback()
     */
 
-    receive() external payable {}
+    receive() external payable {
+        
+    }
 
-    fallback() external payable {}
+    fallback() external payable {
+
+    }
 }

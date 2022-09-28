@@ -4,7 +4,7 @@ pragma solidity >=0.7.0 <0.9.0;
 contract FunctionModifier {
     // We will use these variables to demonstrate how to use
     // modifiers.
-    address public owner;
+    address private owner;
     uint public x = 10;
     bool public locked;
 
@@ -22,7 +22,8 @@ contract FunctionModifier {
         // execute the rest of the code.
         _;
     }
-
+    
+    // 0x00000000000
     // Modifiers can take inputs. This modifier checks that the
     // address passed in is not the zero address.
     modifier validAddress(address _addr) {

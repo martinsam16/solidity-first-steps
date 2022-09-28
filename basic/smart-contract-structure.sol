@@ -12,4 +12,12 @@ contract ContractDeclaration {
     }
 
     // code
+
+    receive() external payable {
+        
+    }
+
+    fallback() external payable {
+
+    }
 }

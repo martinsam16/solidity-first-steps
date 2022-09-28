@@ -9,6 +9,8 @@ contract Counter {
     function increment() external {
         count += 1;
     }
+
+    // more code ..
 }
 
 /**

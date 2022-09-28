@@ -69,6 +69,11 @@ contract DataTypes {
     mapping (uint => string) mappingVar;
     mapping (address => int) mappingVar2;
 
+    function findValue() public {
+        string memory value = mappingVar[3];
+        mappingVar2[0x4901C620133DF0b2a6e41EDD718430B9D31beD6E] = 100;
+    }
+
     /**
         Structs
     */
@@ -78,5 +83,8 @@ contract DataTypes {
         string var3;
         // ...
     }
+
+    mapping (address => StructType) mappingStruct;
+
     StructType structType;
 }
