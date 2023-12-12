@@ -68,6 +68,7 @@ contract DataTypes {
     */
     mapping (uint => string) mappingVar;
     mapping (address => int) mappingVar2;
+    mapping (int => customTypeBool) mappingVar2;
 
     function findValue() public {
         string memory value = mappingVar[3];

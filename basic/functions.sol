@@ -3,7 +3,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract Functions {
     /**
-        function (<parameter types>) {internal|external} [pure|view|payable] [returns (<return types>)]
+        function (<parameter types>) {internal|external|public} [pure|view|payable] [returns (<return types>)]
 
         - pure function declares that no state variable will be changed or read.
         - view function declares that no state will be changed.
@@ -36,6 +36,7 @@ contract Functions {
         view
         returns (uint256 sum)
     {
+        // declare sum with default value
         string memory newVariable = stateVariable;
         sum = uintStateVar + number1 + number2;
 
@@ -69,7 +70,7 @@ contract Functions {
     */
 
     receive() external payable {
-        
+
     }
 
     fallback() external payable {

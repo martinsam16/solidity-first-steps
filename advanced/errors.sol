@@ -21,6 +21,7 @@ contract Errors {
         // - conditions before execution
         // - return values from calls to other functions
         require(_i > 10, "Input must be greater than 10");
+        // ...
     }
 
     function testRevert(uint _i) public pure {

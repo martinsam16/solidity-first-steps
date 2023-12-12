@@ -2,6 +2,7 @@
 
 pragma solidity >=0.7.0 <0.9.0;
 
+// No es recomendable usarlos pq son caros (gas)
 contract ControlStructures {
     function loops() public {
         // for loop

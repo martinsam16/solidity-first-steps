@@ -5,24 +5,34 @@ contract FunctionModifier {
     // We will use these variables to demonstrate how to use
     // modifiers.
     address private owner;
-    uint public x = 10;
-    bool public locked;
+    uint private x;
+    bool private locked;
 
     constructor() {
         // Set the transaction sender as the owner of the contract.
         owner = msg.sender;
+        x = 10;
+    }
+
+    function getX() public view returns(uint){
+        return x;
+    }
+
+    function retrieveContractOwner() public view returns(address){
+        return owner;
     }
 
     // Modifier to check that the caller is the owner of
     // the contract.
     modifier onlyOwner() {
+        // try - catch(Exception)
         require(msg.sender == owner, "Not owner");
         // Underscore is a special character only used inside
         // a function modifier and it tells Solidity to
         // execute the rest of the code.
         _;
     }
-    
+
     // 0x00000000000
     // Modifiers can take inputs. This modifier checks that the
     // address passed in is not the zero address.
@@ -31,7 +41,7 @@ contract FunctionModifier {
         _;
     }
 
-    function changeOwner(address _newOwner) public onlyOwner validAddress(_newOwner) {
+    function changeOwner(address _newOwner) public validAddress(_newOwner) onlyOwner {
         owner = _newOwner;
     }
 
